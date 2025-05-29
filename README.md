@@ -1,30 +1,95 @@
-# Signup page - Dark Modern
+# AI Human Resource Management System (AI-HRMS)
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A modern, AI-powered HRMS platform designed for Malaysian companies. This system streamlines employee management, compliance, and HR operations with advanced automation and real-time insights.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/kk666679s-projects/v0-signup-page-dark-modern)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/KV4FP2Sfr9r)
+---
 
-## Overview
+## 🚀 Features
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+### 🔐 Authentication & Security
+- JWT-based authentication
+- Protected routes with middleware
+- Secure login/signup forms connected to backend APIs
 
-## Deployment
+### 📊 Dashboard Interface
+- Real-time company statistics
+- AI agent activity monitoring
+- Compliance score tracking
+- Payroll summaries
 
-Your project is live at:
+### 👥 Employee Management
+- Employee directory with Malaysian compliance fields
+- Add new employees with validation (IC/Passport, EPF, SOCSO)
+- Employee listing, search, and filtering
 
-**[https://vercel.com/kk666679s-projects/v0-signup-page-dark-modern](https://vercel.com/kk666679s-projects/v0-signup-page-dark-modern)**
+### 🏆 Performance Management
+- Track employee performance and KPIs
+- AI-powered performance analytics
 
-## Build your app
+### 🗓️ Leave Management
+- Leave requests and approvals
+- Malaysian leave policy compliance
 
-Continue building your app on:
+### 📄 Policy Guidance
+- Built-in validation for Employment Act 1955
+- Instant answers to HR policy questions (English & Bahasa Malaysia)
 
-**[https://v0.dev/chat/projects/KV4FP2Sfr9r](https://v0.dev/chat/projects/KV4FP2Sfr9r)**
+### 🏢 Multi-Tenant Architecture
+- Company-scoped data access
+- 30-day trial for new company registrations
 
-## How It Works
+---
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## ⚙️ Tech Stack
+
+- **Frontend:** Next.js, React, Tailwind CSS
+- **Backend:** Node.js, Express, PostgreSQL (NeonDB), JWT
+- **AI/Automation:** Integrated AI agents for HR tasks and analytics
+
+---
+
+## 🛠️ Getting Started
+
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+2. **Run the development server:**
+   ```sh
+   npm run dev
+   ```
+3. **Build for production:**
+   ```sh
+   npm run build
+   ```
+
+---
+
+## 🇲🇾 Malaysian Compliance
+
+- Built-in validation for Employment Act 1955
+- EPF, SOCSO, EIS calculations
+- Bilingual support (English & Bahasa Malaysia)
+
+---
+
+## 📈 Roadmap
+
+- [ ] Employee self-service portal
+- [ ] Advanced analytics and reporting
+- [ ] Mobile app support
+- [ ] More AI-powered HR tools
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 📄 License
+
+MIT
+
+---

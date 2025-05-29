@@ -1,104 +1,38 @@
 // app/employees/page.tsx
-\
-I've started building the frontend integration with our Malaysian AI-HRMS backend. The system now includes:
-
-## **🔐 Authentication System**
-- JWT-based authentication context
-- Protected routes
-with middleware
-- Login/signup forms
-connected
-to
-backend
-APIs
-
-#
-# **📊
-Dashboard
-Interface ** -Real - time
-company
-statistics - AI
-agent
-activity
-monitoring - Compliance
-score
-tracking - Payroll
-summaries
-
-#
-# **👥
-Employee
-Management ** -Employee
-listing
-with Malaysian compliance
-fields - Add
-new employees()
-with validation
-- IC/Passport number
-tracking - EPF / SOCSO
-number
-management
-
-#
-# **🚀
-Key
-Features
-Implemented ** (1 ** Authentication)
-Flow ** -Complete
-signup / login
-with JWT tokens
-2 ** Protected
-Routes ** -Middleware
-to
-secure
-dashboard
-areas
-3 ** Real - time
-Stats ** -Live
-company
-metrics
-and
-AI
-agent
-activities
-4 ** Malaysian
-Compliance** - Built-in validation
-for Employment Act 1955
-5. **Multi-tenant
-Architecture ** -Company - scoped
-data
-access
-
-The
-backend
-is
-now
-fully
-connected
-to
-a
-functional
-frontend
-that
-handles: -User
-registration
-with 30-day trials
-- Employee
-management
-with compliance checking
-- Real-time
-dashboard
-with AI agent
-monitoring - Malaysian
-payroll
-calculations(EPF, SOCSO, EIS)
+import { Button } from '@radix-ui/themes';
 
 export default function EmployeesPage() {
   return (
-    <div>
-      {/* Your employee management UI components here */}
-      <h1>Employee Management</h1>
-      <p>This page will display and manage employee information.</p>
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <header className="mb-10">
+          <h1 className="text-3xl font-bold text-gray-900">Employee Management</h1>
+          <p className="text-gray-600 mt-2">
+            Manage your workforce efficiently with AI-powered tools
+          </p>
+        </header>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Employee Directory Card */}
+          <div className="bg-white rounded-lg shadow p-6">
+            <h2 className="text-xl font-semibold mb-4">Employee Directory</h2>
+            {/* Directory components */}
+          </div>
+          
+          {/* Performance Management Card */}
+          <div className="bg-white rounded-lg shadow p-6">
+            <h2 className="text-xl font-semibold mb-4">Performance Management</h2>
+            {/* Performance components */}
+          </div>
+          
+          {/* Leave Management Card */}
+          <div className="bg-white rounded-lg shadow p-6">
+            <h2 className="text-xl font-semibold mb-4">Leave Management</h2>
+            {/* Leave management components */}
+          </div>
+        </div>
+        {/* <Button>Click me</Button> */}
+      </div>
     </div>
-  )
+  );
 }

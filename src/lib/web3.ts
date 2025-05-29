@@ -1,6 +1,7 @@
 import { createPublicClient, http, parseEther, formatEther } from "viem"
 import { mainnet, polygon, bsc } from "viem/chains"
 import { privateKeyToAccount } from "viem/accounts"
+import Web3 from 'web3';
 
 // Web3 Configuration
 export const SUPPORTED_CHAINS = {
@@ -136,3 +137,43 @@ export function convertMYRToCrypto(myrAmount: number, cryptoSymbol: keyof typeof
 export function convertCryptoToMYR(cryptoAmount: number, cryptoSymbol: keyof typeof CRYPTO_RATES): number {
   return cryptoAmount * CRYPTO_RATES[cryptoSymbol]
 }
+
+declare global {
+  interface Window {
+    ethereum?: any;
+    web3?: any;
+  }
+}
+
+export const getWeb3 = async (): Promise<Web3> => {
+  if (typeof window !== 'undefined' && window.ethereum) {
+    try {
+      // Modern dapp browsers
+      await window.ethereum.request?.({ method: 'eth_requestAccounts' });
+      return new Web3(window.ethereum);
+    } catch (error) {
+      console.error('User denied account access', error);
+      throw new Error('User denied account access');
+    }
+  } else if (typeof window !== 'undefined' && window.web3) {
+    // Legacy dapp browsers
+    return new Web3(window.web3.currentProvider);
+  } else {
+    throw new Error('No Ethereum provider detected');
+  }
+};
+
+export const getAccounts = async (): Promise<string[]> => {
+  const web3 = await getWeb3();
+  return web3.eth.getAccounts();
+};
+
+export const sendTransaction = async (from: string, to: string, amount: string) => {
+  const web3 = await getWeb3();
+  const value = web3.utils.toWei(amount, 'ether');
+  return web3.eth.sendTransaction({
+    from,
+    to,
+    value,
+  });
+};

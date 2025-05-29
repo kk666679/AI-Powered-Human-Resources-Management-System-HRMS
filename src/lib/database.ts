@@ -1,8 +1,8 @@
-import { neon } from "@neondatabase/serverless"
+import { neon } from '@neondatabase/serverless';
 
-const sql = neon(process.env.DATABASE_URL!)
+const sql = neon(process.env.NEON_DATABASE_URL!);
 
-export { sql }
+export { sql };
 
 // Database types
 export interface Company {
