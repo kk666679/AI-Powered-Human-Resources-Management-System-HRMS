@@ -13,6 +13,7 @@ Built with Next.js, Radix UI, and integrated AI agents, AI-HRMS automates HR ope
 
 ```mermaid
 graph TD
+
   subgraph Frontend [Next.js Frontend]
     A1[Login Page]
     A2[Dashboard]
@@ -25,7 +26,7 @@ graph TD
     B2[Employee Management]
     B3[Leave Processing]
     B4[AI Agent & Compliance Layer]
-    B5[Database Access (NeonDB)]
+    B5["Database Access (NeonDB)"]
   end
 
   subgraph AI [AI & Automation]
@@ -45,6 +46,7 @@ graph TD
   A4 --> C2
   C1 --> B4
   C2 --> B4
+
 ````
 
 ---
