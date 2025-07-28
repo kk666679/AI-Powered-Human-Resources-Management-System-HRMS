@@ -1,0 +1,23 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  - package-ecosystem: "npm" # Assuming you're using npm
+    directory: "/" # Update dependencies in the root directory
+    schedule:
+      interval: "weekly" # Check for updates weekly
+    ignore:
+      - dependency-name: "typescript" # Example: Ignore updates for TypeScript
+        versions: ["4.x"] # Example: Ignore only 4.x versions
+    commit-message:
+      prefix: "deps" # Prefix Dependabot commits with "deps"
+    reviewers:
+      - "kk666679" # Assign PRs to your GitHub account
+    assignees:
+      - "kk666679" # Assign PRs to your GitHub account
+    labels:
+      - "dependencies"
+      - "automation"
