@@ -23,7 +23,7 @@
     "baseUrl": ".",
     "types": [],
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./*"],
       "@radix-ui/react-button": ["..."]
     },
     "plugins": [
