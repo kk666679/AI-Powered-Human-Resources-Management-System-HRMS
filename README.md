@@ -1,95 +1,181 @@
-# AI Human Resource Management System (AI-HRMS)
+# 🤖 AI Human Resource Management System (AI-HRMS)
 
-A modern, AI-powered HRMS platform designed for Malaysian companies. This system streamlines employee management, compliance, and HR operations with advanced automation and real-time insights.
+A modern, AI-powered, multi-tenant HRMS platform designed for Malaysian companies.  
+Built with Next.js, Radix UI, and integrated AI agents, AI-HRMS automates HR operations, ensures legal compliance, and delivers real-time analytics.
+
+---
+
+## 🧠 Overview
+
+> This system leverages modern frontend/backends with AI-enhanced HR tools tailored for Malaysia's legal and cultural environment.
+
+### 🔧 System Architecture
+
+```mermaid
+graph TD
+  subgraph Frontend [Next.js Frontend]
+    A1[Login Page]
+    A2[Dashboard]
+    A3[Leave & Policy Forms]
+    A4[Employee Directory]
+  end
+
+  subgraph Backend [Express + Node.js API]
+    B1[Auth Service]
+    B2[Employee Management]
+    B3[Leave Processing]
+    B4[AI Agent & Compliance Layer]
+    B5[Database Access (NeonDB)]
+  end
+
+  subgraph AI [AI & Automation]
+    C1[Chat-based HR Assistant]
+    C2[Performance Analyzer]
+  end
+
+  A1 --> B1
+  A2 --> B2
+  A3 --> B3
+  A4 --> B2
+  B1 --> B5
+  B2 --> B5
+  B3 --> B5
+  B4 --> B5
+  A2 --> C1
+  A4 --> C2
+  C1 --> B4
+  C2 --> B4
+````
 
 ---
 
 ## 🚀 Features
 
-### 🔐 Authentication & Security
-- JWT-based authentication
-- Protected routes with middleware
-- Secure login/signup forms connected to backend APIs
+### 🛡️ Authentication & Security
 
-### 📊 Dashboard Interface
-- Real-time company statistics
-- AI agent activity monitoring
-- Compliance score tracking
-- Payroll summaries
+* JWT-based auth
+* Role-based route protection
+* Secure signup/login flows
+
+### 📊 Dashboard & Analytics
+
+* Real-time HR KPIs
+* AI agent monitoring
+* Payroll, leave, and compliance visualizations
 
 ### 👥 Employee Management
-- Employee directory with Malaysian compliance fields
-- Add new employees with validation (IC/Passport, EPF, SOCSO)
-- Employee listing, search, and filtering
 
-### 🏆 Performance Management
-- Track employee performance and KPIs
-- AI-powered performance analytics
+* Add/update employees (IC/Passport, EPF, SOCSO)
+* Search, sort, and filter directory
+* Supports Malaysian formatting & validations
 
-### 🗓️ Leave Management
-- Leave requests and approvals
-- Malaysian leave policy compliance
+### 🧑‍💼 Performance & Leave Management
 
-### 📄 Policy Guidance
-- Built-in validation for Employment Act 1955
-- Instant answers to HR policy questions (English & Bahasa Malaysia)
+* AI-assisted performance tracking
+* Leave requests with automated validation
+* Built-in support for Malaysian leave policies
 
-### 🏢 Multi-Tenant Architecture
-- Company-scoped data access
-- 30-day trial for new company registrations
+### 📘 Policy Guidance
 
----
+* Compliance engine with **Employment Act 1955**
+* English & Bahasa Malaysia support
+* Instant HR Q\&A via AI
 
-## ⚙️ Tech Stack
+### 🏢 Multi-Tenant Support
 
-- **Frontend:** Next.js, React, Tailwind CSS
-- **Backend:** Node.js, Express, PostgreSQL (NeonDB), JWT
-- **AI/Automation:** Integrated AI agents for HR tasks and analytics
+* Tenant-scoped data isolation
+* 30-day free trial for new company sign-ups
 
 ---
 
-## 🛠️ Getting Started
+## 🧰 Tech Stack
 
-1. **Install dependencies:**
-   ```sh
+| Layer          | Technology                                        |
+| -------------- | ------------------------------------------------- |
+| **Frontend**   | Next.js, React 19, Tailwind CSS, Radix UI         |
+| **Backend**    | Node.js, Express, JWT, PostgreSQL via Neon        |
+| **AI & Tools** | Zod, React Hook Form, Lucide, shadcn/ui, Recharts |
+| **Web3 Ready** | Web3, Ethers, viem, @web3-react/core              |
+
+---
+
+## 🛠 Getting Started
+
+1. **Install dependencies**
+
+   ```bash
    npm install
    ```
-2. **Run the development server:**
-   ```sh
+
+2. **Run development server**
+
+   ```bash
    npm run dev
    ```
-3. **Build for production:**
-   ```sh
+
+3. **Build for production**
+
+   ```bash
    npm run build
    ```
 
 ---
 
+## 🧪 Running Tests
+
+> *Note: Ensure environment variables are set before testing.*
+
+```bash
+npm run test
+npm run test:integration
+```
+
+---
+
 ## 🇲🇾 Malaysian Compliance
 
-- Built-in validation for Employment Act 1955
-- EPF, SOCSO, EIS calculations
-- Bilingual support (English & Bahasa Malaysia)
+* ✅ EPF, SOCSO, EIS integration
+* ✅ Leave types & HR forms compliant with Malaysian law
+* ✅ Built-in Employment Act 1955 validation
+* ✅ Bilingual UX (English & Bahasa Malaysia)
 
 ---
 
 ## 📈 Roadmap
 
-- [ ] Employee self-service portal
-- [ ] Advanced analytics and reporting
-- [ ] Mobile app support
-- [ ] More AI-powered HR tools
+* [ ] Mobile App (iOS & Android)
+* [ ] AI resume screening
+* [ ] Self-service employee portal
+* [ ] HR ticketing system
+* [ ] Multi-currency payroll for SEA
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+1. Fork the repository
+2. Create a new feature branch
+3. Commit your changes
+4. Open a pull request
+
+> For major feature proposals, please create an issue first to discuss the changes.
+
+---
+
+## 📦 Project Dependencies
+
+> Full list found in [`package.json`](./package.json)
+
+### Examples:
+
+* `next@15.3.2`
+* `react@19.1.0`
+* `tailwindcss@3.4.17`
+* `@radix-ui/react-*` (various)
+* `@hookform/resolvers`, `zod`, `lucide-react`, `recharts`, `web3`, `ethers`
 
 ---
 
 ## 📄 License
 
-MIT
-
----
+MIT © 2025 — \[Chemmara Enterprise]
