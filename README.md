@@ -180,4 +180,6 @@ npm run test:integration
 
 ## 📄 License
 
-MIT © 2025 — \[Chemmara Enterprise]
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+MIT © 2025 — [Chemmara Enterprise]
