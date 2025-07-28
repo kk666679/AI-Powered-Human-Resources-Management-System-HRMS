@@ -1,6 +1,12 @@
 import { neon } from '@neondatabase/serverless';
 
-const sql = neon(process.env.NEON_DATABASE_URL!);
+const { NEON_DATABASE_URL } = process.env;
+
+if (!NEON_DATABASE_URL) {
+  throw new Error('NEON_DATABASE_URL is not set in environment variables');
+}
+
+const sql = neon(NEON_DATABASE_URL);
 
 export { sql };
 
@@ -19,9 +25,9 @@ export interface Company {
   email?: string
   subscription_plan: "starter" | "professional" | "enterprise"
   subscription_status: "trial" | "active" | "cancelled" | "expired"
-  trial_ends_at?: Date
-  created_at: Date
-  updated_at: Date
+  trial_ends_at?: Date | string
+  created_at: Date | string
+  updated_at: Date | string
 }
 
 export interface User {
@@ -33,9 +39,9 @@ export interface User {
   role: "admin" | "hr_manager" | "user"
   phone?: string
   is_active: boolean
-  last_login?: Date
-  created_at: Date
-  updated_at: Date
+  last_login?: Date | string
+  created_at: Date | string
+  updated_at: Date | string
 }
 
 export interface Employee {
@@ -50,7 +56,7 @@ export interface Employee {
   phone?: string
   position?: string
   department?: string
-  hire_date?: Date
+  hire_date?: Date | string
   employment_type: "full-time" | "part-time" | "contract"
   salary?: number
   epf_number?: string
@@ -59,16 +65,16 @@ export interface Employee {
   bank_account?: string
   bank_name?: string
   status: "active" | "inactive" | "terminated"
-  created_at: Date
-  updated_at: Date
+  created_at: Date | string
+  updated_at: Date | string
 }
 
 export interface PayrollRecord {
   id: number
   company_id: number
   employee_id: number
-  pay_period_start: Date
-  pay_period_end: Date
+  pay_period_start: Date | string
+  pay_period_end: Date | string
   basic_salary: number
   allowances: number
   overtime_pay: number
@@ -82,8 +88,8 @@ export interface PayrollRecord {
   income_tax: number
   net_pay: number
   status: "pending" | "processed" | "paid"
-  processed_at?: Date
-  created_at: Date
+  processed_at?: Date | string
+  created_at: Date | string
 }
 
 export interface ComplianceRecord {
@@ -94,11 +100,11 @@ export interface ComplianceRecord {
   description?: string
   violation_details?: string
   penalty_amount?: number
-  due_date?: Date
-  resolved_at?: Date
+  due_date?: Date | string
+  resolved_at?: Date | string
   ai_agent?: string
-  created_at: Date
-  updated_at: Date
+  created_at: Date | string
+  updated_at: Date | string
 }
 
 export interface AIAgentActivity {
@@ -109,5 +115,5 @@ export interface AIAgentActivity {
   description?: string
   status?: string
   metadata?: any
-  created_at: Date
+  created_at: Date | string
 }
