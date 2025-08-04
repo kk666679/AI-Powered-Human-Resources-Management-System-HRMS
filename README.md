@@ -158,14 +158,17 @@ def generate_hr_insights():
 - TalentCorp mobility statistics
 
 ## 🏢 System Capabilities Matrix
-| Module | AI Features | Compliance | Analytics |	Integration |
-| IR | Dispute prediction Agreement analysis |	Industrial Court rules Union regulations | Strike risk scores Case resolution time	| Legal database | API  Case management | 
-| ER	| Sentiment tracking Mediation bot	| Employment Act PDPA	Engagement scores | Conflict hotspots	 Survey tools | Communication platforms |
-| C&B	| Salary benchmarking Pay equity scan	| LHDN/EPF/SOCSO Zakat rules |	Compensation ratios Benefits utilization	| Payroll systems Bank APIs |
-| Talent	| AI sourcing Interview analytics	| Immigration laws PDPA hiring	| Quality of hire Time-to-fill	| Job portals Background check |
-| L&D	| Skill gap detection Path recommendations	| HRDF requirements Certifications	| Competency growth Training ROI	| LMS integration Content providers |
-| Performance	| OKR tracking Bias detection	| Labor standards Promotion policies	| Performance trends Potential analysis	| Goal systems Feedback tools |
-| Payroll	| Auto-calculations Anomaly detection	| Full Malaysian tax Sharia compliance	| Cost projections Variance analysis	| Banking systems Tax authorities |
+ 
+| **Module**      | **AI Features**                           | **Compliance**                            | **Analytics**                             | **Integration**                      |
+| --------------- | ----------------------------------------- | ----------------------------------------- | ----------------------------------------- | ------------------------------------ |
+| **IR**          | Dispute prediction, Agreement analysis    | Industrial Court rules, Union regulations | Strike risk scores, Case resolution time  | Legal database, API, Case management |
+| **ER**          | Sentiment tracking, Mediation bot         | Employment Act, PDPA, Engagement scores   | Conflict hotspots, Survey tools           | Communication platforms              |
+| **C\&B**        | Salary benchmarking, Pay equity scan      | LHDN, EPF, SOCSO, Zakat rules             | Compensation ratios, Benefits utilization | Payroll systems, Bank APIs           |
+| **Talent**      | AI sourcing, Interview analytics          | Immigration laws, PDPA (hiring)           | Quality of hire, Time-to-fill             | Job portals, Background check        |
+| **L\&D**        | Skill gap detection, Path recommendations | HRDF requirements, Certifications         | Competency growth, Training ROI           | LMS integration, Content providers   |
+| **Performance** | OKR tracking, Bias detection              | Labor standards, Promotion policies       | Performance trends, Potential analysis    | Goal systems, Feedback tools         |
+| **Payroll**     | Auto-calculations, Anomaly detection      | Full Malaysian tax, Sharia compliance     | Cost projections, Variance analysis       | Banking systems, Tax authorities     |
+
 
 
 ---
