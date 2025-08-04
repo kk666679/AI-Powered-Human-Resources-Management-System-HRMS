@@ -68,6 +68,7 @@
 
 ## 🌟 Talent Acquisition Suite
 ### AI Capabilities:
+```mermaid
 timeline
   title AI-Powered HR Platform Rollout Roadmap
 
