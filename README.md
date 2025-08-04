@@ -176,7 +176,7 @@ def generate_hr_insights():
 # 🔄 Workflow Automation Examples
 
 ## 📝 Employee Lifecycle Automation
-```Diagram
+```mermaid
 sequenceDiagram
     participant Candidate
     participant AI-HRMS
